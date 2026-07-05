@@ -1,0 +1,16 @@
+{
+  "tests/test_ingest.py::TestDataIngestor::test_detect_format": true,
+  "tests/test_ingest.py::TestDataIngestor::test_list_supported_formats": true,
+  "tests/test_ingest.py::TestDataIngestor::test_validate_genomics_format": true,
+  "tests/test_ingest.py::TestDataIngestor::test_validate_transcriptomics_format": true,
+  "tests/test_ingest.py::TestIntegration::test_end_to_end_minimal": true,
+  "tests/test_integrate.py::TestMultiOmicsIntegrator::test_integrate_graph_method": true,
+  "tests/test_integrate.py::TestMultiOmicsIntegrator::test_integrate_embedding_method": true,
+  "tests/test_integrate.py::TestMultiOmicsIntegrator::test_integrate_spatial_method": true,
+  "tests/test_integrate.py::TestMultiOmicsIntegrator::test_integrate_invalid_method": true,
+  "tests/test_integrate.py::TestMultiOmicsIntegrator::test_build_graph": true,
+  "tests/test_integrate.py::TestMultiOmicsIntegrator::test_compute_embeddings": true,
+  "tests/test_integrate.py::TestMultiOmicsIntegrator::test_feature_importance": true,
+  "tests/test_integrate.py::TestMultiOmicsIntegrator::test_empty_data": true,
+  "tests/test_integrate.py::TestMultiOmicsIntegrator::test_get_methods": true
+}
