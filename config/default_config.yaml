@@ -1,0 +1,102 @@
+# BioOmicsBridge Default Configuration
+
+project:
+  name: BioOmicsBridge
+  version: "1.0.0"
+  description: "AI-Powered Multi-Omics Data Integration and Drug Target Discovery"
+
+# Data ingestion settings
+ingestion:
+  auto_detect_format: true
+  max_file_size_mb: 10240
+  parallel_workers: 4
+  supported_genomics:
+    - vcf
+    - vcf.gz
+    - bed
+    - bim
+    - fam
+    - gwas
+  supported_transcriptomics:
+    - h5ad
+    - mtx
+    - loom
+    - tsv
+    - csv
+  supported_proteomics:
+    - maxquant
+    - diann
+    - spectronaut
+  supported_metabolomics:
+    - mzml
+    - mzxml
+    - cdf
+  supported_spatial:
+    - visium
+    - merfish
+    - xenium
+
+# Harmonization settings
+harmonization:
+  default_method: auto
+  normalization_methods:
+    - zscore
+    - minmax
+    - quantile
+    - tpm
+  batch_correction:
+    enabled: true
+    methods:
+      - combat
+      - harmony
+  imputation:
+    enabled: true
+    method: knn
+    n_neighbors: 5
+  qc_thresholds:
+    min_genes_per_cell: 200
+    max_mito_pct: 20.0
+
+# Integration settings
+integration:
+  default_method: graph
+  n_components: 50
+  graph:
+    edge_weight_threshold: 0.5
+    max_edges_per_node: 100
+  embedding:
+    algorithm: spectral
+    random_state: 42
+  spatial:
+    preserve_context: true
+    neighborhood_size: 6
+
+# Target discovery settings
+discovery:
+  min_confidence: 0.8
+  top_n_targets: 20
+  druggability_assessment: true
+  evidence_chain:
+    include_literature: true
+    include_clinical: true
+    include_expression: true
+
+# Agent settings
+agents:
+  backend: local
+  max_concurrent: 4
+  timeout_seconds: 300
+  retry_on_failure: true
+  max_retries: 3
+
+# Dashboard settings
+dashboard:
+  host: 0.0.0.0
+  port: 3000
+  debug: false
+
+# Logging
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  log_file: null
