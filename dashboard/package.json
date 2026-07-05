@@ -1,0 +1,30 @@
+{
+  "name": "bioomics-bridge-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BioOmicsBridge Web Dashboard - Multi-Omics Data Integration & Drug Target Discovery",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "plotly.js-dist-min": "^2.30.0",
+    "react-plotly.js": "^2.6.0",
+    "chart.js": "^4.4.0",
+    "react-chartjs-2": "^5.2.0",
+    "tailwindcss": "^3.4.0",
+    "lucide-react": "^0.300.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0"
+  }
+}
